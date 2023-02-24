@@ -1,0 +1,9 @@
+{
+  "name": "guard-lib-root",
+  "workspaces": {
+    "nohoist": [],
+    "packages": [
+      "packages/*"
+    ]
+  }
+}
