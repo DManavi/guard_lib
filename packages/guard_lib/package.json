@@ -1,4 +1,7 @@
 {
   "name": "guard-lib",
-  "version": "0.0.1"
+  "version": "1.0.0",
+  "dependencies": {
+    "zod": "^3.20.6"
+  }
 }

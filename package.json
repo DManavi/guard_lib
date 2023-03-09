@@ -5,5 +5,13 @@
     "packages": [
       "packages/*"
     ]
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.14.191",
+    "@types/node": "^16.18.14",
+    "typescript": "^4.9.5"
+  },
+  "dependencies": {
+    "error-lib": "^2.0.1"
   }
 }
