@@ -37,7 +37,7 @@ export const ensureIsArray = <T = any>(arg?: any, argName?: string): void => {
 export const ensureIsNonEmptyArray = (arg: any, argName?: string): void => {
   if (isNonEmptyArray(arg) === false) {
     throw new BadRequestError(
-      `${argName ?? 'Provided parameter'} is either not an array or is empty.`,
+      `${argName ?? 'Provided argument'} is either not an array or is empty.`,
     );
   }
 };

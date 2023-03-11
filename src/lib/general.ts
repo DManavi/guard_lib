@@ -50,7 +50,10 @@ export const ensureIsNotNull = (arg?: any, argName?: string): void => {
  * Ensure the provided argument is not null or undefined
  * @param arg argument to check
  */
-export const ensureIsNotNullOrUndefined = (arg?: any, argName?: string) => {
+export const ensureIsNotNullOrUndefined = (
+  arg?: any,
+  argName?: string,
+): void => {
   ensureIsNotUndefined(arg, argName);
   ensureIsNotNull(arg, argName);
 };

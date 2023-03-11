@@ -1,11 +1,5 @@
 {
-  "name": "guard-lib-root",
-  "workspaces": {
-    "nohoist": [],
-    "packages": [
-      "packages/*"
-    ]
-  },
+  "name": "guard-lib",
   "devDependencies": {
     "@types/lodash": "^4.14.191",
     "@types/node": "^16.18.14",

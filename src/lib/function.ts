@@ -12,7 +12,7 @@ export const isFunction = (val: any): val is Function =>
  * Ensure the provided value is a function
  * @param val Provided value
  */
-export const ensureIsFunction = (val: any) => {
+export const ensureIsFunction = (val: any): void => {
   if (isFunction(val) === false) {
     throw new BadRequestError(
       `Provided value is not a function (is ${typeof val})`,
