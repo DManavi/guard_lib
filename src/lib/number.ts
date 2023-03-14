@@ -3,10 +3,13 @@ import { BadRequestError } from 'error-lib';
 import { NumberRange } from '../types';
 import { ensureTypeIs } from './general';
 
+/**
+ * List of default excluded numbers
+ */
 export const defaultExcludedNumbers: Array<number> = [NaN, Infinity];
 
 /**
- * Check if the provided value is undefined
+ * Check if the provided value is a number
  * @param val value to check
  * @param excludedNumbers List of numbers to to be considered as valid number (e.g. NaN or Infinity)
  * @returns type check result
@@ -74,7 +77,7 @@ export const ensureIsWithinRange = <T extends number | bigint = number>(
 };
 
 /**
- * Check if the provided value is undefined
+ * Check if the provided value is a big integer
  * @param val value to check
  * @returns type check result
  */
