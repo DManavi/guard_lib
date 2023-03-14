@@ -1,28 +1,16 @@
 /**
- * Function guard
+ * Number range
  */
-export type Guard<T extends (...args: Array<any>) => ReturnType<T>> = (
-  ...args: Parameters<T>
-) => void;
-
-/**
- * Guarded function
- */
-export type GuardFactory = <T extends (...args: Array<any>) => ReturnType<T>>(
-  fn: T,
-  ...guards: Array<Guard<T>>
-) => T;
-
-export type Range = {
+export type NumberRange<T extends number | bigint> = {
   /**
    * Range start
    */
-  start: number;
+  start: T;
 
   /**
    * Range end
    */
-  end: number;
+  end: T;
 
   /**
    * Is inclusive range
