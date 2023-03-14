@@ -1,12 +1,16 @@
-import { BadRequestError } from 'error-lib';
+import { ensureTypeIs } from './general';
 
-export const isBoolean = (val?: any): val is boolean =>
-  typeof val === 'boolean';
+/**
+ * Check if provided value is a boolean
+ * @param val Value to check
+ * @returns type check result
+ */
+export const isBoolean = (val: any): val is boolean => typeof val === 'boolean';
 
-export const ensureIsBoolean = (val?: any, argName?: string): void => {
-  if (isBoolean(val) === false) {
-    throw new BadRequestError(
-      `${argName ?? 'Provided argument'} is not a boolean.`,
-    );
-  }
-};
+/**
+ * Ensure provided value is a boolean
+ * @param val Value to check
+ * @param argName Argument name
+ */
+export const ensureIsBoolean = (val: any, argName?: string): void =>
+  ensureTypeIs(val, 'boolean', argName);
