@@ -1,8 +1,8 @@
-import { BadRequestError } from 'error-lib';
+import { ensureTypeIs } from './general';
 
 /**
  * Check if the provided value is a function
- * @param val Provided value
+ * @param val Value to check
  * @returns Type check result
  */
 export const isFunction = (val: any): val is Function =>
@@ -10,12 +10,8 @@ export const isFunction = (val: any): val is Function =>
 
 /**
  * Ensure the provided value is a function
- * @param val Provided value
+ * @param val Value to check
+ * @param argName Argument name
  */
-export const ensureIsFunction = (val: any): void => {
-  if (isFunction(val) === false) {
-    throw new BadRequestError(
-      `Provided value is not a function (is ${typeof val})`,
-    );
-  }
-};
+export const ensureIsFunction = (val: any, argName?: string) =>
+  ensureTypeIs(val, 'function', argName);
