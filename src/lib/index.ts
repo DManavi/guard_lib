@@ -1,6 +1,6 @@
-export * from './array';
-export * from './boolean';
-export * from './function';
+export * as arrayGuards from './array';
+export * as booleanGuards from './boolean';
+export * as functionGuards from './function';
 export * from './general';
-export * from './number';
-export * from './string';
+export * as numberGuards from './number';
+export * as stringGuards from './string';

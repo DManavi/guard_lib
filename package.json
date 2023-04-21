@@ -1,11 +1,68 @@
 {
   "name": "guard-lib",
+  "description": "Standard Guarding Library for JavaScript/TypeScript projects (NodeJS & Browsers)",
+  "type": "commonjs",
+  "files": [
+    "dist",
+    "LICENSE",
+    "README.md",
+    "package.json",
+    "package-lock.json"
+  ],
+  "main": "./dist/require/index.js",
+  "module": "./dist/import/index.js",
+  "types": "./dist/types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/types/index.d.ts",
+      "require": "./dist/require/index.js",
+      "import": "./dist/import/index.js"
+    }
+  },
+  "scripts": {
+    "clean": "rimraf dist/",
+    "build:import": "tsc -b ./tsconfig.build.import.json",
+    "build:require": "tsc -b ./tsconfig.build.require.json",
+    "build": "run-p clean build:import build:require",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "coverage": "jest --coverage"
+  },
   "devDependencies": {
-    "@types/lodash": "^4.14.191",
     "@types/node": "^16.18.14",
+    "error-lib": "^2.0.1",
+    "npm-run-all": "^4.1.5",
+    "rimraf": "^5.0.0",
     "typescript": "^4.9.5"
   },
-  "dependencies": {
-    "error-lib": "^2.0.1"
-  }
+  "peerDependencies": {
+    "error-lib": "^2.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DManavi/guard_lib.git"
+  },
+  "keywords": [
+    "guard",
+    "validation",
+    "ensure",
+    "assert",
+    "assertion",
+    "error",
+    "exception",
+    "errors",
+    "try-catch",
+    "stacktrace",
+    "error-handler",
+    "error-handlers",
+    "error-class",
+    "error-classes",
+    "error-monitoring"
+  ],
+  "author": "Danial Manavi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DManavi/guard_lib/issues"
+  },
+  "homepage": "https://github.com/DManavi/guard_lib#readme"
 }
